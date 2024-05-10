@@ -2,22 +2,24 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 import pages.TextBoxPage;
+import utils.TestData;
 
 public class TextBoxTests extends TestBase {
 
     TextBoxPage textBox = new TextBoxPage();
+    TestData testData = new TestData();
 
     @Test
     void fillFormTest() {
         textBox.openPage()
-                .setFullName("Artur")
-                .setEmail("king@yandex.ru")
-                .setCurrentAddress("Castle Camelot")
-                .setPermanentAddress("Castle Camelot 2")
+                .setFullName(testData.firstName)
+                .setEmail(testData.email)
+                .setCurrentAddress(testData.currentAddress)
+                .setPermanentAddress(testData.permanentAddress)
                 .submitClick()
-                .checkResult("name","Artur")
-                .checkResult("email","king@yandex.ru")
-                .checkResult("currentAddress","Castle Camelot")
-                .checkResult("permanentAddress","Castle Camelot 2");
+                .checkResult("name",testData.firstName)
+                .checkResult("email",testData.email)
+                .checkResult("currentAddress",testData.currentAddress)
+                .checkResult("permanentAddress",testData.permanentAddress);
     }
 }
