@@ -30,7 +30,7 @@ public class PracticeFormTests extends TestBase {
                 .checkResult("Student Email", testData.email)
                 .checkResult("Gender", testData.gender)
                 .checkResult("Mobile", testData.userNumber)
-                .checkResult("Date of Birth", testData.calendarDay+" "+testData.calendarMonth+','+testData.calendarYear)
+                .checkResult("Date of Birth", testData.calendarDay + " " + testData.calendarMonth + ',' + testData.calendarYear)
                 .checkResult("Subjects", testData.subject)
                 .checkResult("Hobbies", testData.hobby)
                 .checkResult("Picture", testData.file)
@@ -50,7 +50,7 @@ public class PracticeFormTests extends TestBase {
                 .checkResult("Student Name", testData.firstName + " " + testData.lastName)
                 .checkResult("Gender", testData.gender)
                 .checkResult("Mobile", testData.userNumber)
-                .checkResult("Date of Birth", testData.calendarDay+" "+testData.calendarMonth+','+testData.calendarYear);
+                .checkResult("Date of Birth", testData.calendarDay + " " + testData.calendarMonth + ',' + testData.calendarYear);
     }
 
     @Test
